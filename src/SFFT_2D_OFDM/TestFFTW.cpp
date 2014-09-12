@@ -1,32 +1,53 @@
-#include <fftw3.h>
 #include <iostream>
 #include <fstream>
-void main()
+#include <fstream>
+using namespace std;
+
+
+int main()
 {
-    int N = 0;
-    fftw_complex * in, * out;
+    int N = 20;
+    fftw_complex * out;
+    double * in;
     fftw_plan p;
-    char * src = new char[N];
+    double * src = new double[N];
 
-    ifstream fin("d:\\test_data.txt",ios::nocreate|ios::binary);
-    char c;
-    int i = 0;
-    while((c = fin.get()!=EOF){
-        src[i] = c;
-        i++;
+    ifstream fin("E:\\testDataSmall.txt",ios::binary);
+
+    for(int i = 0;i<20;i++){
+        fin>>src[i];
+        cout<<src[i]<<endl;
     }
+    cout<<"-----------------------"<<endl;
 //  in = (fftw_complex*)fftw_molloc(sizeof(fftw_complex) * N);
-    in = (double *)fftw_molloc(sizeof(double)*N);
-    out = (fftw_complex*)fftw_molloc(sizeof(fftw_complex) * N);
+    in = (double *)fftw_malloc(sizeof(double)*N);
+    out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * N);
+    double * out2 = (double *)fftw_malloc(sizeof(double)*N);
+    fftw_plan p2 = fftw_plan_dft_c2r_1d(N,out,out2,FFTW_MEASURE);
+    p = fftw_plan_dft_r2c_1d(N,in,out,FFTW_MEASURE);
     for(int i = 0;i< N;i++){
-        in[i] = (double)src[i];
+        in[i] = src[i];
     }
-//  p = fftw_plan_dft_1d(N,in,out,FFTW_FORWORD,FFTW_ESTIMATE);
-    p = fftw_plan_dft_r2c_1d(N,in,out,FFTW_FORWORD,FFTW_ESTIMATE);
+//  p = fftw_plan_dft_1d(N,in,out,FFTW_FORWORD,FFTW_MEASURE);
+//    p = fftw_plan_dft_r2c_1d(N,in,out,FFTW_MEASURE);
+    for(int i = 0;i<20;i++){
+        cout<<in[i]<<endl;
+    }
+    cout<<"---------------------------------"<<endl;
     fftw_execute(p);
+    for(int i = 0;i<20;i++){
+        cout<<out[i][1]<<", "<<out[i][2]<<"i"<<endl;
+    }
 
-
-    fftw_destory_plan(p);
+    fftw_execute(p2);
+    cout << "------------------------"<<endl;
+    for(int i = 0;i<20;i++){
+        cout<<out2[i]<<endl;
+    }
+    delete [] src;
+    fftw_destroy_plan(p);
+    fftw_destroy_plan(p2);
     fftw_free(in);
     fftw_free(out);
+    fftw_free(out2);
 }

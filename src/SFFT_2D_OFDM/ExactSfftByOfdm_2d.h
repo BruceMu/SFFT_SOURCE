@@ -2,24 +2,25 @@
 #define EXACTSFFTBYOFDM_2D_H_INCLUDED
 
 #include <iostream>
+#include <fftw3.h>
 
 
 class ExactSfftByOfdm_2d
 {
 private:
-    complex<float> * src;
-    complex<float> * sparsefouries;
+    fftw_complex * src;
+    fftw_complex * sparsefouries;
     int length;
     int width;
     int sparseK;
 public:
-    void ExactSfftByOfdm_2d();
-    void ~ExactSfftByOfdm_2d();
+    ExactSfftByOfdm_2d(Raw2D & raw);
+    ~ExactSfftByOfdm_2d();
 
     void Normalization(char * srchar);
-    void FoldToBins(complex<float> * src,int Br,int Bc,int Tr,int Tc);
-    void BasicExact2DSfft(complex<float> * src,int k);
-    void BasicEstFreq(complex<float> * sam_srcX,complex<float> * sam_srcY,int T,bool isCol);
+    void FoldToBins(fftw_complex * src,int Br,int Bc,int Tr,int Tc);
+    void BasicExact2DSfft(fftw_complex * src,int k);
+    void BasicEstFreq(fftw_complex * sam_srcX,fftw_complex * sam_srcY,int T,bool isCol);
 
 };
 
