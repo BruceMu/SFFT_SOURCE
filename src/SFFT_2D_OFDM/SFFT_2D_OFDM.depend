@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1410606831 source:e:\code\sfft_source\src\sfft_2d_ofdm\testonesparse.cpp
+	<iostream>
+	<fstream>
+	<fftw3.h>
+
+1394875660 e:\code\sfft_source\tool\fftw-3.3.4-dll32\fftw3.h
+	<stdio.h>
+	<stddef.h>
+

@@ -4,24 +4,34 @@
 #include <iostream>
 #include <fftw3.h>
 
+struct TwoDFreElement
+{
+    long rowIndex;
+    long colIndex;
+    fftw_complex value;
+};
 
 class ExactSfftByOfdm_2d
 {
 private:
-    fftw_complex * src;
+    double * src;
     fftw_complex * sparsefouries;
     int length;
     int width;
-    int sparseK;
 public:
+    int sparseK;
+    int sampleDims;
     ExactSfftByOfdm_2d(Raw2D & raw);
     ~ExactSfftByOfdm_2d();
 
+    void setSparse(int kspase);
+    void setSampleDims(int sampleT);
     void Normalization(char * srchar);
-    void FoldToBins(fftw_complex * src,int Br,int Bc,int Tr,int Tc);
-    void BasicExact2DSfft(fftw_complex * src,int k);
-    void BasicEstFreq(fftw_complex * sam_srcX,fftw_complex * sam_srcY,int T,bool isCol);
+    fftw_complex * FoldToBins(double * src,int Br,int Bc,int Tr,int Tc,bool samDir);
+    void BasicExact2DSfft(fftw_complex * src);
+    TwoDFreElement* BasicEstFreq(fftw_complex ** sam_srcX,fftw_complex ** sam_srcY,int T,bool isCol);
 
 };
+
 
 #endif // EXACTSFFTBYOFDM_2D_H_INCLUDED

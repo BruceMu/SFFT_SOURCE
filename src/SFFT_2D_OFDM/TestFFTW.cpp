@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <fstream>
+#include <fftw3.h>
 using namespace std;
 
 
@@ -35,8 +35,12 @@ int main()
     }
     cout<<"---------------------------------"<<endl;
     fftw_execute(p);
+    fftw_complex inital = out[0];
     for(int i = 0;i<20;i++){
-        cout<<out[i][1]<<", "<<out[i][2]<<"i"<<endl;
+        if(out[i][0]> 0 or out[i][1]> 0 ){
+            cout<<out[i][1]<<", "<<out[i][2]<<"i"<<out[i]-inital<<endl;
+
+        }
     }
 
     fftw_execute(p2);
