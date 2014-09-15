@@ -1,0 +1,30 @@
+﻿生成启动时间为 2014-9-15 15:02:29。
+     1>项目“E:\code\SFFT_SOURCE\Test\TestSfftOfdm.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\TestSfftOfdm.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Debug\TestSfftOfdm.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         E:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       ManifestResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\TestSfftOfdm.exe.embed.manifest.res" Debug\TestSfftOfdm_manifest.rc 
+       Link:
+         E:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.exe" /INCREMENTAL /NOLOGO "libfftw3l-3.lib" "libfftw3f-3.lib" "libfftw3-3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TestSfftOfdm.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.lib" /MACHINE:X86 Debug\TestSfftOfdm.exe.embed.manifest.res
+         Debug\main.obj
+       Manifest:
+         正在删除文件“Debug\TestSfftOfdm.exe.embed.manifest”。
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\TestSfftOfdm.exe.embed.manifest" /manifest Debug\TestSfftOfdm.exe.intermediate.manifest
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\TestSfftOfdm.exe.embed.manifest.res" Debug\TestSfftOfdm_manifest.rc 
+       LinkEmbedManifest:
+         E:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.exe" /INCREMENTAL /NOLOGO "libfftw3l-3.lib" "libfftw3f-3.lib" "libfftw3-3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TestSfftOfdm.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.lib" /MACHINE:X86 Debug\TestSfftOfdm.exe.embed.manifest.res
+         Debug\main.obj
+         TestSfftOfdm.vcxproj -> E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\TestSfftOfdm.unsuccessfulbuild”。
+         正在对“Debug\TestSfftOfdm.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\code\SFFT_SOURCE\Test\TestSfftOfdm.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.50

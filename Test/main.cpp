@@ -12,7 +12,7 @@ int main()
 
     fftw_complex * src = (fftw_complex*)fftw_malloc(sizeof(fftw_complex)*N);
 
-    ifstream fin("D:\\School\\SFFT_SOURCE\\Test\\testOneSparse.txt",ios::binary);
+    ifstream fin("E:\\testOneSparse.txt",ios::binary);
 
     for(int i = 0;i<20;i++){
         fin>>src[i][0];
@@ -43,6 +43,25 @@ int main()
     cout<<devide[0]<<endl;
     cout<<devide[1]<<endl;
     cout << phase <<endl;
+
+	cout<<"------------yanzheng------------------------------"<<endl;
+	fftw_complex freValue = {out[0][0],out[0][1]};
+	fftw_complex tmp = {0,0};
+	double model = 0;
+	for(int i = 0;i< 4;i++){
+		fftw_complex wn = {cos(2*PI*i*phase/N),sin(2*PI*i*phase/N)};
+		cout<<freValue[0]*wn[0]-freValue[1]*wn[1]<<"  "<<freValue[0]*wn[1]+freValue[1]*wn[0]<<endl;
+		tmp[0] = out[i][0] - (freValue[0]*wn[0]-freValue[1]*wn[1]);
+		tmp[1] = out[i][1] - (freValue[0]*wn[1]+freValue[1]*wn[0]);
+		model += sqrt(tmp[0]*tmp[0]+tmp[1]*tmp[1]);
+		cout<<tmp[0]<<" "<<tmp[1]<<endl;
+	}
+	cout<<"-------------------------------------------"<<endl;
+	cout<<model<<endl;
+	if (model < 0.00000001)
+	{
+		cout<<"sccess!"<<endl;
+	}
     fftw_destroy_plan(p);
     fftw_free(src);
     fftw_free(out);
