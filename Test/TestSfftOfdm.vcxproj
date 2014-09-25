@@ -34,7 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32;D:\opencv\build\include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32;D:\opencv\build\include\opencv;D:\opencv\include\opencv2;D:\opencv\build\include;$(IncludePath)</IncludePath>
     <LibraryPath>E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32;D:\opencv\build\x86\vc10\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -73,6 +73,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StatisFreq.cpp" />
+    <ClCompile Include="StatisFreqWithUdefine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

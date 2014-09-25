@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string.h>
 #define PIXTYPE float
+
+using namespace std;
 class Raw2D
 {
 private:   			//-----------------DATA-----------------

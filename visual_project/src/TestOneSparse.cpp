@@ -18,8 +18,8 @@ int main()
         cout<<src[i][0]<<src[i][1]<<endl;
     }
 
-    cout<<"--------------------------------------------------------"<<endl
-    fftw_complex* out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * N);
+    cout<<"--------------------------------------------------------"<<endl;
+    fftw_complex * out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * N);
     fftw_plan p = fftw_plan_dft_1d(N,src,out,FFTW_FORWARD,FFTW_ESTIMATE);
     fftw_execute(p);
 

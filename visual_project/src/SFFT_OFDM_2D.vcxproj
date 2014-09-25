@@ -34,7 +34,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32;$(IncludePath)</IncludePath>
+    <IncludePath>E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32;E:\code\SFFT_SOURCE\tool\eigen\Eigen;$(IncludePath)</IncludePath>
     <LibraryPath>E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -47,6 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>E:\code\SFFT_SOURCE\tool\eigen;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
@@ -73,13 +74,9 @@
   <ItemGroup>
     <ClCompile Include="ExactSfftByOfdm_2d.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Row2D.cpp" />
-    <ClCompile Include="TestFFTW.cpp" />
-    <ClCompile Include="TestOneSparse.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExactSfftByOfdm_2d.h" />
-    <ClInclude Include="Raw2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

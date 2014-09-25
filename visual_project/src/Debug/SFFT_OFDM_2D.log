@@ -1,67 +1,55 @@
-﻿生成启动时间为 2014-9-15 10:05:07。
-     1>项目“E:\code\SFFT_SOURCE\visual_project\src\SFFT_OFDM_2D.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
-         正在创建“Debug\SFFT_OFDM_2D.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+﻿生成启动时间为 2014-9-17 11:28:05。
+     1>项目“E:\code\SFFT_SOURCE\visual_project\src\SFFT_OFDM_2D.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\SFFT_OFDM_2D.lastbuildstate”。
+       InitializeBuildStatus:
+         正在对“Debug\SFFT_OFDM_2D.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         E:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ExactSfftByOfdm_2d.cpp main.cpp Row2D.cpp TestOneSparse.cpp
-         TestOneSparse.cpp
-     1>TestOneSparse.cpp(22): error C2146: 语法错误: 缺少“;”(在标识符“fftw_complex”的前面)
-     1>TestOneSparse.cpp(22): error C2065: “out”: 未声明的标识符
-     1>TestOneSparse.cpp(22): error C2275: “fftw_complex”: 将此类型用作表达式非法
-                 E:\code\SFFT_SOURCE\tool\fftw-3.3.4-dll32\fftw3.h(357) : 参见“fftw_complex”的声明
-     1>TestOneSparse.cpp(23): error C2065: “out”: 未声明的标识符
-     1>TestOneSparse.cpp(28): error C2065: “out”: 未声明的标识符
-     1>TestOneSparse.cpp(28): error C2065: “out”: 未声明的标识符
-     1>TestOneSparse.cpp(32): error C2065: “out”: 未声明的标识符
-         Row2D.cpp
-     1>Row2D.cpp(8): error C2143: 语法错误 : 缺少“;”(在“using”的前面)
+         E:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ExactSfftByOfdm_2d.cpp main.cpp
          main.cpp
+     1>main.cpp(13): error C2079: “fin”使用未定义的 class“std::basic_ifstream<_Elem,_Traits>”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+     1>main.cpp(13): error C2078: 初始值设定项太多
+     1>main.cpp(15): error C2297: “>>”: 非法，右操作数包含“double”类型
+     1>main.cpp(15): warning C4552: “>>”: 运算符不起任何作用；应输入带副作用的运算符
+     1>main.cpp(23): error C2065: “ExactSfftByOfdm_2d”: 未声明的标识符
+     1>main.cpp(23): error C2146: 语法错误: 缺少“;”(在标识符“esfft”的前面)
+     1>main.cpp(23): error C3861: “esfft”: 找不到标识符
+     1>main.cpp(24): error C2065: “esfft”: 未声明的标识符
+     1>main.cpp(24): error C2228: “.setSampleDims”的左边必须有类/结构/联合
+                 类型是“'unknown-type'”
+     1>main.cpp(25): error C2065: “esfft”: 未声明的标识符
+     1>main.cpp(25): error C2228: “.setSparse”的左边必须有类/结构/联合
+                 类型是“'unknown-type'”
+     1>main.cpp(26): error C2065: “esfft”: 未声明的标识符
+     1>main.cpp(26): error C2228: “.BasicExact2DSfft”的左边必须有类/结构/联合
+                 类型是“'unknown-type'”
+     1>main.cpp(30): error C3861: “fftw_destory_plan”: 找不到标识符
          ExactSfftByOfdm_2d.cpp
-     1>e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(24): error C2061: 语法错误: 标识符“Raw2D”
-     1>ExactSfftByOfdm_2d.cpp(7): error C2065: “Raw2D”: 未声明的标识符
-     1>ExactSfftByOfdm_2d.cpp(7): error C2065: “raw2”: 未声明的标识符
-     1>ExactSfftByOfdm_2d.cpp(8): error C2448: “ExactSfftByOfdm_2d::{ctor}”: 函数样式初始值设定项类似函数定义
-     1>ExactSfftByOfdm_2d.cpp(19): error C2228: “.src”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(20): error C2228: “.sparsefouries”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(21): error C2143: 语法错误 : 缺少“;”(在“}”的前面)
-     1>ExactSfftByOfdm_2d.cpp(27): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
-     1>ExactSfftByOfdm_2d.cpp(27): error C2556: “int ExactSfftByOfdm_2d::setSparse(int)”: 重载函数与“void ExactSfftByOfdm_2d::setSparse(int)”只是在返回类型上不同
-                 e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(27) : 参见“ExactSfftByOfdm_2d::setSparse”的声明
-     1>ExactSfftByOfdm_2d.cpp(27): error C2371: “ExactSfftByOfdm_2d::setSparse”: 重定义；不同的基类型
-                 e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(27) : 参见“ExactSfftByOfdm_2d::setSparse”的声明
-     1>ExactSfftByOfdm_2d.cpp(28): error C2228: “.sparseK”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(35): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
-     1>ExactSfftByOfdm_2d.cpp(35): error C2556: “int ExactSfftByOfdm_2d::setSampleDims(int)”: 重载函数与“void ExactSfftByOfdm_2d::setSampleDims(int)”只是在返回类型上不同
-                 e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(28) : 参见“ExactSfftByOfdm_2d::setSampleDims”的声明
-     1>ExactSfftByOfdm_2d.cpp(35): error C2371: “ExactSfftByOfdm_2d::setSampleDims”: 重定义；不同的基类型
-                 e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(28) : 参见“ExactSfftByOfdm_2d::setSampleDims”的声明
-     1>ExactSfftByOfdm_2d.cpp(36): error C2228: “.sampleDims”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(54): error C2228: “.length”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(54): error C2228: “.length”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(54): error C2228: “.width”的左边必须有类/结构/联合
-                 类型是“ExactSfftByOfdm_2d *const ”
-                 是否改用“->”?
-     1>ExactSfftByOfdm_2d.cpp(58): error C2440: “初始化”: 无法从“void *”转换为“fftw_complex (*)”
-                 从“void*”到指向非“void”的指针的转换要求显式类型转换
-     1>ExactSfftByOfdm_2d.cpp(59): error C2040: “p”:“fftw_plan”与“long”的间接寻址级别不同
-     1>ExactSfftByOfdm_2d.cpp(86): warning C4244: “初始化”: 从“double”转换到“long”，可能丢失数据
-     1>ExactSfftByOfdm_2d.cpp(97): error C2511: “void ExactSfftByOfdm_2d::BasicExact2DSfft(double *,int)”:“ExactSfftByOfdm_2d”中没有找到重载的成员函数
-                 e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(15) : 参见“ExactSfftByOfdm_2d”的声明
+     1>e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(40): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(40): error C2143: 语法错误 : 缺少“,”(在“<”的前面)
+     1>ExactSfftByOfdm_2d.cpp(23): error C2664: “fftw_free”: 不能将参数 1 从“const double *”转换为“void *”
+                 转换丢失限定符
+     1>ExactSfftByOfdm_2d.cpp(63): error C2040: “p”:“fftw_plan”与“long”的间接寻址级别不同
+     1>ExactSfftByOfdm_2d.cpp(71): error C2511: “void ExactSfftByOfdm_2d::BasicEstFreq(const std::vector<_Ty>,const std::vector<_Ty>,bool)”:“ExactSfftByOfdm_2d”中没有找到重载的成员函数
+                 with
+                 [
+                     _Ty=fftw_complex (*)
+                 ]
+                 e:\code\sfft_source\visual_project\src\ExactSfftByOfdm_2d.h(17) : 参见“ExactSfftByOfdm_2d”的声明
+     1>ExactSfftByOfdm_2d.cpp(140): error C2664: “ExactSfftByOfdm_2d::FoldToBins”: 不能将参数 1 从“const double *”转换为“double *”
+                 转换丢失限定符
+     1>ExactSfftByOfdm_2d.cpp(141): error C2664: “ExactSfftByOfdm_2d::FoldToBins”: 不能将参数 1 从“const double *”转换为“double *”
+                 转换丢失限定符
+     1>ExactSfftByOfdm_2d.cpp(149): error C2660: “ExactSfftByOfdm_2d::BasicEstFreq”: 函数不接受 3 个参数
+     1>ExactSfftByOfdm_2d.cpp(154): error C2660: “ExactSfftByOfdm_2d::BasicEstFreq”: 函数不接受 3 个参数
          正在生成代码...
-     1>已完成生成项目“E:\code\SFFT_SOURCE\visual_project\src\SFFT_OFDM_2D.vcxproj”(build 个目标)的操作 - 失败。
+     1>已完成生成项目“E:\code\SFFT_SOURCE\visual_project\src\SFFT_OFDM_2D.vcxproj”(rebuild 个目标)的操作 - 失败。
 
 生成失败。
 
-已用时间 00:00:03.14
+已用时间 00:00:01.59

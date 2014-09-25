@@ -1,30 +1,36 @@
-﻿生成启动时间为 2014-9-15 15:02:29。
-     1>项目“E:\code\SFFT_SOURCE\Test\TestSfftOfdm.vcxproj”在节点 2 上(rebuild 个目标)。
-     1>_PrepareForClean:
-         正在删除文件“Debug\TestSfftOfdm.lastbuildstate”。
-       InitializeBuildStatus:
+﻿生成启动时间为 2014-9-24 12:03:04。
+     1>项目“E:\code\SFFT_SOURCE\Test\TestSfftOfdm.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
          正在创建“Debug\TestSfftOfdm.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         E:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
+         E:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StatisFreq.cpp
+         StatisFreq.cpp
+     1>d:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>StatisFreq.cpp(30): warning C4018: “<”: 有符号/无符号不匹配
+     1>StatisFreq.cpp(42): warning C4018: “<”: 有符号/无符号不匹配
+     1>StatisFreq.cpp(51): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>StatisFreq.cpp(52): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>StatisFreq.cpp(54): warning C4018: “<”: 有符号/无符号不匹配
+     1>StatisFreq.cpp(66): warning C4018: “<”: 有符号/无符号不匹配
        ManifestResourceCompile:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\TestSfftOfdm.exe.embed.manifest.res" Debug\TestSfftOfdm_manifest.rc 
+         所有输出均为最新。
        Link:
-         E:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.exe" /INCREMENTAL /NOLOGO "libfftw3l-3.lib" "libfftw3f-3.lib" "libfftw3-3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TestSfftOfdm.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.lib" /MACHINE:X86 Debug\TestSfftOfdm.exe.embed.manifest.res
+         E:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\code\SFFT_SOURCE\visual_project\src\Debug\TestSfftOfdm.exe" /INCREMENTAL /NOLOGO "libfftw3l-3.lib" "libfftw3f-3.lib" "libfftw3-3.lib" opencv_calib3d244d.lib opencv_contrib244d.lib opencv_core244d.lib opencv_features2d244d.lib opencv_flann244d.lib opencv_gpu244d.lib opencv_highgui244d.lib opencv_imgproc244d.lib opencv_legacy244d.lib opencv_ml244d.lib opencv_objdetect244d.lib opencv_ts244d.lib opencv_video244d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TestSfftOfdm.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\code\SFFT_SOURCE\visual_project\src\Debug\TestSfftOfdm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\code\SFFT_SOURCE\visual_project\src\Debug\TestSfftOfdm.lib" /MACHINE:X86 Debug\TestSfftOfdm.exe.embed.manifest.res
          Debug\main.obj
+         Debug\StatisFreq.obj
+         Debug\StatisFreqWithUdefine.obj
        Manifest:
-         正在删除文件“Debug\TestSfftOfdm.exe.embed.manifest”。
          C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\TestSfftOfdm.exe.embed.manifest" /manifest Debug\TestSfftOfdm.exe.intermediate.manifest
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\TestSfftOfdm.exe.embed.manifest.res" Debug\TestSfftOfdm_manifest.rc 
+         所有输出均为最新。
        LinkEmbedManifest:
-         E:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.exe" /INCREMENTAL /NOLOGO "libfftw3l-3.lib" "libfftw3f-3.lib" "libfftw3-3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TestSfftOfdm.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.lib" /MACHINE:X86 Debug\TestSfftOfdm.exe.embed.manifest.res
-         Debug\main.obj
-         TestSfftOfdm.vcxproj -> E:\code\SFFT_SOURCE\Test\Debug\TestSfftOfdm.exe
+         所有输出均为最新。
+         TestSfftOfdm.vcxproj -> E:\code\SFFT_SOURCE\visual_project\src\Debug\TestSfftOfdm.exe
        FinalizeBuildStatus:
          正在删除文件“Debug\TestSfftOfdm.unsuccessfulbuild”。
          正在对“Debug\TestSfftOfdm.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\code\SFFT_SOURCE\Test\TestSfftOfdm.vcxproj”(rebuild 个目标)的操作。
+     1>已完成生成项目“E:\code\SFFT_SOURCE\Test\TestSfftOfdm.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:02.50
+已用时间 00:00:03.15
